@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff0f5;
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero p {
+    margin: 15px 0;
+    color: white;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #e63950;
+}
+
+/* MESSAGE */
+.message {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.message h2 {
+    margin-bottom: 20px;
+    color: #ff4d6d;
+}
+
+/* MEMORIES */
+.memories {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.memories h2 {
+    margin-bottom: 30px;
+    color: #ff4d6d;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee-content {
+    display: inline-flex;
+    gap: 15px;
+}
+
+.top-marquee .marquee-content {
+    animation: scroll-right 30s linear infinite;
+}
+
+.bottom-marquee .marquee-content {
+    animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-25%); }
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(-25%); }
+    100% { transform: translateX(0); }
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* FINAL */
+.final {
+    padding: 80px 20px;
+    text-align: center;
+    background: #ffe4e9;
+}
+
+.final h2 {
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+/* FLOATING HEARTS */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    color: red;
+    font-size: 20px;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
